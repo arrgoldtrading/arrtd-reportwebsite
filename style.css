@@ -65,6 +65,7 @@ header ul .submenu {
     opacity: 0;
     z-index: -999;
     transition: all ease 0.5s;
+    text-align: left;
 }
 
 header ul li:hover .submenu {
