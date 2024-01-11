@@ -151,6 +151,9 @@ header ul .submenu li a {
         left: 2rem;
         width: unset;
     }
+    .logo{
+        font-size: 15px;
+    }
 
 }
 
