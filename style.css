@@ -2,17 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: none;
+    font-family: Oswald , sans-serif;
 }
 
-body {
-    font-family: Oswald, sans-serif;    
-    overflow-x: hidden;
-    color: #42424A;
+body{
+    height: 100vh;
+    background-image: url(https://img5.pic.in.th/file/secure-sv1/daria-shevtsova-zbWFT4eVopE-unsplash.jpeg);
+    background-size: cover;
+    background-position: center;
 }
 
-
-label.namearr {
+.logo{
     color: #f5c42b;
     font-size: 35px;
     line-height: 80px;
@@ -20,42 +20,53 @@ label.namearr {
     font-weight: bold;
     margin-left: -330px;
     text-shadow: 2px 2px #444444;
-  }
-  
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 249px;
 }
 
-header ul li {
-    display: inline-block;
+li{
     list-style: none;
-    margin: 0 30px;
 }
 
-header ul li:last-child {
-    margin-right: -90px;
-}
-
-header ul li a{
+a{
     text-decoration: none;
-    color: #42424A;
-    padding: 15px 0;
-    display: inline-block;
-    transition: all ease 0.5s;
+    color: black;
     font-size: 18px;
 }
 
-header ul li a:hover {
-    color: #f7b90c;
+a:hover{
+    color: #fcbf04;
 }
 
+/* Header */
+header{
+    position: relative;
+    padding: 0 2rem;
+    background-color: white;
+    height: 70px;
+    width: 100%;
+}
 
-/* Style Submenu */
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .menu{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn{
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Submenu */
 header ul .submenu {
     position: absolute;
     width: 150px;
@@ -85,8 +96,61 @@ header ul .submenu li a {
     width: 100%;
 }
 
-section{
-    background: url(https://img5.pic.in.th/file/secure-sv1/daria-shevtsova-zbWFT4eVopE-unsplash.jpeg) no-repeat;
-    background-size: cover;
-    height: calc(100vh - 80px);
-  }
+/* Dropdown Menu */
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255,255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    height: 240px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.reportdd{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+
+/* Responsive design */
+@media (max-width: 992px)  {
+    .navbar .menu{
+        display: none;
+    }
+    .navbar .toggle_btn{
+        display: block;
+    }
+    .logo{
+        margin-left: -120px;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+}
+
+@media (max-width: 576px)  {
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+
+}
+
