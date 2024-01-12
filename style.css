@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Oswald , sans-serif;
+    font-family: courier;
 }
 
 body{
     height: 100vh;
-    background-image: url(https://img5.pic.in.th/file/secure-sv1/daria-shevtsova-zbWFT4eVopE-unsplash.jpeg);
+    background-image: url(https://img5.pic.in.th/file/secure-sv1/pawel-czerwinski-9lNoGFaNI2c-unsplash.jpeg);
     background-size: cover;
     background-position: center;
 }
@@ -18,8 +18,7 @@ body{
     line-height: 80px;
     padding: 0 100px;
     font-weight: bold;
-    margin-left: -330px;
-    text-shadow: 2px 2px #444444;
+    margin-left: -310px;
 }
 
 li{
@@ -28,7 +27,7 @@ li{
 
 a{
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 18px;
 }
 
@@ -40,7 +39,7 @@ a:hover{
 header{
     position: relative;
     padding: 0 2rem;
-    background-color: white;
+    background-color: #393939;
     height: 70px;
     width: 100%;
 }
@@ -57,7 +56,7 @@ header{
 
 .navbar .menu{
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .navbar .toggle_btn{
@@ -66,11 +65,15 @@ header{
     display: none;
 }
 
+.toggle_btn{
+    color: white;
+}
+
 /* Submenu */
 header ul .submenu {
     position: absolute;
-    width: 150px;
-    background-color: #ffffff;
+    width: 170px;
+    background-color: #393939;
     box-shadow: 0 20px 45px #00000020;
     margin-top: -50px;
     opacity: 0;
@@ -94,6 +97,7 @@ header ul .submenu li a {
     padding: 15px 20px;
     display: inline-block;
     width: 100%;
+    font-size: 15px;
 }
 
 /* Dropdown Menu */
@@ -104,15 +108,14 @@ header ul .submenu li a {
     top: 60px;
     height: 0;
     width: 300px;
-    background: rgba(255, 255,255,0.1);
-    backdrop-filter: blur(15px);
+    background: #393939;
     border-radius: 10px;
     overflow: hidden;
     transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .dropdown_menu.open{
-    height: 240px;
+    height: 260px;
 }
 
 .dropdown_menu li {
@@ -127,6 +130,7 @@ header ul .submenu li a {
     align-items: center;
     justify-content: center;
     font-size: 18px;
+    color: white;
 }
 
 
@@ -151,6 +155,7 @@ header ul .submenu li a {
         left: 2rem;
         width: unset;
     }
+    
     .logo{
         font-size: 25px;
     }
